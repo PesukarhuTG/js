@@ -1,6 +1,5 @@
-function min(x,y)
- {if (x,y) return x;
-    else return y;}
+function min(x, y) 
+{x < y ? console.log(x) : console.log(y)}
 
-console.log(min(0, 10));
-console.log(min(0, -10));
+min(0, 10);
+min(0, -10);
