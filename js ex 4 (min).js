@@ -1,5 +1,7 @@
 function min(x, y) 
-{x < y ? console.log(x) : console.log(y)}
+/*let a = x < y ? x : y;
+return a;
+схлопываем строчки*/
+{return x < y ? x : y}
 
-min(0, 10);
-min(0, -10);
+console.log(min(0, 10));
