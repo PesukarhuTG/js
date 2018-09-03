@@ -1,12 +1,26 @@
 /*Затем напишите функцию sum, принимающую массив чисел и возвращающую их сумму. 
 Запустите указанную выше инструкцию и убедитесь, что она возвращает 55.*/
 
-/* ПОКА НЕ РАБОТАЕТ. В ПРОЦЕССЕ */
-function sum(array) { //вводим функцию, принимающую массив чисел и возвращающую их сумму
-    let result=0;  //вводим переменную result, подсчитывающую сумму
-    for(let i=0; i < array.length; i++) //пока i меньше длины массива в result класть iтый элемент массива
-    result += array[i];
-    return result; //выводим сумму чисел массива
+function range(start, end, step = 1) {
+    let arr = [];
+
+      if (step > 0) {
+        for (let i = start; i <= end; i+=step)
+        {arr.push(i); }
+    }
+    else   {
+        for (let i = start; i >= end; i+=step)
+            {arr.push(i);}
+    }
+    return arr;
 }
 
-console.log(sum(1, 10));
+function sum(arr)
+{
+    let sum = 0;
+    return arr.reduce(function (sum, current) {
+        return sum + current;
+    });
+}
+
+console.log(sum(range(1, 10))); //-->55
